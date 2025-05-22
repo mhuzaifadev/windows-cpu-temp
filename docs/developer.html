@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Documentation - Windows CPU & GPU Temperature Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <style>
+        .dev-content {
+            max-width: 800px;
+            margin: 8rem auto 4rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .dev-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .dev-content h2 {
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+        }
+
+        .dev-content h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .dev-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .dev-content pre {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .dev-content code {
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .dev-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .dev-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/icon.png" alt="Logo">
+                <span>Windows Temp Monitor</span>
+            </div>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="index.html#support">Support</a></li>
+                <li><a href="https://github.com/mhuzaifadev/windows-cpu-temp" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="dev-content">
+            <h1>Developer Documentation</h1>
+            
+            <h2>Getting Started</h2>
+            <p>This guide will help you set up the development environment and contribute to the Windows CPU & GPU Temperature Monitor project.</p>
+
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Python 3.8 or later</li>
+                <li>Git</li>
+                <li>Windows 10 or later</li>
+                <li>Visual Studio Code (recommended) or any IDE of your choice</li>
+            </ul>
+
+            <h3>Setup Development Environment</h3>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/mhuzaifadev/windows-cpu-temp.git
+cd windows-cpu-temp</code></pre>
+                </li>
+                <li>Create a virtual environment:
+                    <pre><code>python -m venv venv
+.\venv\Scripts\activate</code></pre>
+                </li>
+                <li>Install dependencies:
+                    <pre><code>pip install -r requirements.txt</code></pre>
+                </li>
+            </ol>
+
+            <h2>Project Structure</h2>
+            <pre><code>windows-cpu-temp/
+├── assets/              # Application assets
+│   ├── icon.ico        # Application icon
+│   └── icon.png        # Application logo
+├── docs/               # Documentation and website
+│   ├── css/           # Website styles
+│   ├── images/        # Website images
+│   └── *.html         # Website pages
+├── main.py            # Main application code
+├── WinTmp.py          # Temperature monitoring module
+├── requirements.txt   # Python dependencies
+└── README.md         # Project documentation</code></pre>
+
+            <h2>Building the Application</h2>
+            <p>To build the executable:</p>
+            <pre><code>pyinstaller --onefile --windowed --icon=assets/icon.ico main.py</code></pre>
+            <p>The executable will be created in the <code>dist</code> directory.</p>
+
+            <h2>Contributing</h2>
+            <h3>Development Workflow</h3>
+            <ol>
+                <li>Fork the repository</li>
+                <li>Create a new branch for your feature:
+                    <pre><code>git checkout -b feature/your-feature-name</code></pre>
+                </li>
+                <li>Make your changes</li>
+                <li>Commit your changes:
+                    <pre><code>git commit -m "Add your feature description"</code></pre>
+                </li>
+                <li>Push to your fork:
+                    <pre><code>git push origin feature/your-feature-name</code></pre>
+                </li>
+                <li>Create a Pull Request</li>
+            </ol>
+
+            <h3>Coding Standards</h3>
+            <ul>
+                <li>Follow PEP 8 style guide for Python code</li>
+                <li>Use meaningful variable and function names</li>
+                <li>Add comments for complex logic</li>
+                <li>Write docstrings for functions and classes</li>
+                <li>Keep functions small and focused</li>
+            </ul>
+
+            <h2>Testing</h2>
+            <p>Before submitting a pull request, ensure your code works correctly:</p>
+            <ol>
+                <li>Test the application on different Windows versions</li>
+                <li>Verify temperature readings are accurate</li>
+                <li>Check for any memory leaks</li>
+                <li>Ensure the UI is responsive</li>
+            </ol>
+
+            <h2>Version Control</h2>
+            <p>We follow semantic versioning (MAJOR.MINOR.PATCH):</p>
+            <ul>
+                <li>MAJOR: Incompatible API changes</li>
+                <li>MINOR: Backwards-compatible functionality</li>
+                <li>PATCH: Backwards-compatible bug fixes</li>
+            </ul>
+
+            <h2>Need Help?</h2>
+            <p>If you need help or have questions:</p>
+            <ul>
+                <li>Open an issue on GitHub</li>
+                <li>Check existing issues and discussions</li>
+                <li>Join our Discord community</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Windows Temp Monitor</h4>
+                <p>Made with ❤️ by <a href="https://mhuzaifa.com">M. Huzaifa</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://github.com/mhuzaifadev/windows-cpu-temp">GitHub</a></li>
+                    <li><a href="LICENSE">License</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Windows Temp Monitor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
